@@ -17,7 +17,7 @@ export default function GetStarted() {
         }}
       >
         {/* container */}
-        <div className="mx-auto p-4 md:w-[40%] w-[80%]">
+        <div className="mx-auto p-4 md:w-[40%] w-[95%]">
           {/* header */}
           <div className="flex items-center justify-center text-center flex-col gap-2">
             <Link href="/">

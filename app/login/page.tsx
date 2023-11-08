@@ -13,7 +13,7 @@ export default function LoginPage() {
       }}
     >
       {/* container */}
-      <div className="md:w-[30%] w-[80%]  mx-auto p-4">
+      <div className="md:w-[30%] w-[95%]  mx-auto p-4">
         {/* header */}
         <div className="flex items-center justify-center text-center flex-col gap-2">
           <Link href="/">

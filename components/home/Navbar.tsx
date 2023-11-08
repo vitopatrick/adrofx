@@ -43,10 +43,10 @@ const Navbar = (props: Props) => {
             </Link>
           ))}
         </div> */}
-        <div className="md:flex gap-4 hidden">
+        <div className="flex gap-4">
           <Link
             href="/get-started"
-            className="font-body font-semibold border border-blue-400 text-blue-400 uppercase   rounded-md px-6 py-3 w-full block"
+            className="font-body hidden  font-semibold border border-blue-400 text-blue-400 uppercase   rounded-md px-6 py-3 w-full md:block"
           >
             Login
           </Link>
@@ -57,7 +57,7 @@ const Navbar = (props: Props) => {
             Register
           </Link>
         </div>
-        <button className="block md:hidden">
+        <button className="hidden">
           <Menu />
         </button>
       </div>
