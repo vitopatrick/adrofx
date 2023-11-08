@@ -27,6 +27,7 @@ export default function SideBarLinks({
       {/* logo */}
       <div>
         <Link
+          onClick={() => setIsVisible(!visible)}
           href="/dashboard"
           className="md:w-[100%] w-[50%] block  mx-auto p-3 underline text-main font-header tracking-widest"
         >
