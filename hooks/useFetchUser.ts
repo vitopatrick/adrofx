@@ -10,7 +10,6 @@ export const useFetchUser = () => {
   const { user }: {} | null | any = useContext(UserContext);
 
 
-  console.log(user.email);
 
   const [userState, setUserState] = useState<{} | null>();
   const [error, setError] = useState<{} | null | string>();

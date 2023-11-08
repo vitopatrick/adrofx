@@ -28,7 +28,6 @@ export default function TradingForm() {
   });
 
   const onSubmit = (formValues: FormValues) => {
-    console.log(formValues);
   };
 
   return (
