@@ -18,16 +18,17 @@ export default function SideBarLinks() {
   };
 
   return (
-    <div className="text-white p-4 relative">
+    <div className="text-white p-4 relative h-screen">
       {/* logo */}
       <div>
         <Link
           href="/dashboard"
-          className="text-2xl underline text-main font-header tracking-widest"
+          className="w-[50px] underline text-main font-header tracking-widest"
         >
           <img
-            src="https://irp.cdn-website.com/eacf0b23/dms3rep/multi/BrokerBase+Logo-01.svg"
+            src="https://adrofx.com/themes/custom/adrofx_theme/img/adro-fx-logo.svg"
             alt=""
+            className="w-full"
           />
         </Link>
       </div>
@@ -72,7 +73,7 @@ export default function SideBarLinks() {
         </div>
         {/* end of transactions links */}
         {/* logout button */}
-        <div className="p-2 md:mt-[10rem]">
+        <div className="p-2 ">
           <button
             onClick={logOut}
             className="flex items-center gap-1 font-body w-full hover:bg-bg px-2 py-4 rounded-lg"

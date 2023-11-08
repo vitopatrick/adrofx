@@ -66,10 +66,10 @@ const RegisterForm = () => {
       );
 
       // call the API
-      await fetch("/api", {
-        method: "POST",
-        body: JSON.stringify({ email: values.email }),
-      });
+      // await fetch("/api", {
+      //   method: "POST",
+      //   body: JSON.stringify({ email: values.email }),
+      // });
 
       // add the refresh token to localStorage
       localStorage.setItem("token", user.refreshToken);
@@ -118,81 +118,90 @@ const RegisterForm = () => {
   };
 
   return (
-    <section className="w-full mt-[3rem] md:mt-0">
-      <form className="space-y-8" onSubmit={handleSubmit(registerUser)}>
+    <section className="w-full bg-white rounded-md p-4 mt-4">
+      <form className="space-y-4" onSubmit={handleSubmit(registerUser)}>
         {/* Name */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="name" className="font-bodyTwo">
+          <label htmlFor="name" className="font-body font-light text-blue-500">
             Name
           </label>
           <input
             type="text"
             {...register("full_name")}
             placeholder="John Doe"
-            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+            className="border-b-2 p-3 border-neutral-400 font-body font-light capitalize"
           />
-          <p className="font-bodyTwo text-sm capitalize text-red-400">
+          <p className="font-body text-red-500 text-sm capitalize font-light py-2">
             {errors.full_name?.message}
           </p>
         </div>
         {/* email */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="email" className="font-bodyTwo">
+          <label htmlFor="email" className="font-body font-light text-blue-500">
             Email
           </label>
           <input
             type="email"
             {...register("email")}
             placeholder="JohnDoe@example.com"
-            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+            className="border-b-2 p-3 border-neutral-400 font-body font-light capitalize"
           />
-          <p className="font-bodyTwo text-sm capitalize text-red-400">
+          <p className="font-body text-red-500 text-sm capitalize font-light py-2">
             {errors.email?.message}
           </p>
         </div>
         {/* password */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="password" className="font-bodyTwo">
+          <label
+            htmlFor="password"
+            className="font-body font-light text-blue-500"
+          >
             Password
           </label>
           <input
             type="password"
             {...register("password")}
-            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+            className="border-b-2 p-3 border-neutral-400 font-body font-light capitalize"
           />
-          <p className="font-bodyTwo text-sm capitalize text-red-400">
+          <p className="font-body text-red-500 text-sm capitalize font-light py-2">
             {errors.password?.message}
           </p>
         </div>
         {/* phone Number */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="phone Number" className="font-bodyTwo">
+          <label
+            htmlFor="phone Number"
+            className="font-body font-light text-blue-500"
+          >
             Phone Number
           </label>
           <input
             type="tel"
             {...register("phone_number")}
-            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+            className="border-b-2 p-3 border-neutral-400 font-body font-light capitalize"
           />
-          <p className="font-bodyTwo text-sm capitalize text-red-400">
+          <p className="font-body text-red-500 text-sm capitalize font-light py-2">
             {errors.phone_number?.message}
           </p>
         </div>
         {/* country */}
         <div className="flex flex-col gap-1">
-          <label htmlFor="country" className="font-bodyTwo">
+          <label
+            htmlFor="country"
+            className="font-body font-light text-blue-500"
+          >
             Country
           </label>
           <select
             {...register("country")}
-            className="border-b-2 p-3 border-neutral-400 font-bodyTwo"
+            className="border-b-2 p-3 border-neutral-400 font-body font-light capitalize"
           >
             {countries &&
               countries.map((country: any) => (
                 <option value={country.country}>{country.country}</option>
               ))}
           </select>
-          <p className="font-bodyTwo text-sm capitalize text-red-400">
+          <p className="font-body text-red-500 text-sm capitalize font-light py-2">
             {errors.country?.message}
           </p>
         </div>
@@ -202,17 +211,17 @@ const RegisterForm = () => {
           disabled={!isValid}
           className={
             !isValid
-              ? "font-headerTwo font-semibold bg-neutral-500 w-full p-4 text-neutral-300 rounded-md"
-              : "font-headerTwo font-semibold bg-black w-full p-4 text-white rounded-md"
+              ? "font-body font-semibold bg-blue-500/40 w-full p-4 text-blue-300 rounded-md"
+              : "font-body font-semibold bg-blue-500 w-full p-4 text-white rounded-md"
           }
         >
           Register Today
         </button>
         {/* Route the user to the login page */}
         <div>
-          <p className="font-bodyTwo text-neutral-400">
+          <p className="font-body text-neutral-400 font-light capitalize text-center">
             Already Have an account{" "}
-            <Link href="/login" className="text-neutral-600 underline">
+            <Link href="/login" className="text-blue-600 underline font-medium">
               Login Account
             </Link>
           </p>

@@ -3,43 +3,47 @@ import React from "react";
 
 type Props = {};
 
+const images = [
+  "https://adrofx.com/sites/default/files/2020-12/art-of-trading-xs_0.jpg",
+  "https://adrofx.com/sites/default/files/2022-07/%D1%81opy-trading-thunmbnail_0.jpg",
+  "https://adrofx.com/sites/default/files/2020-12/deposit-bonus-xs_1.jpg",
+  "https://adrofx.com/sites/default/files/2020-12/markets-xs_0.jpg",
+];
+
 const Hero = (props: Props) => {
   return (
-    <div
-      style={{
-        background:
-          "url('https://lirp.cdn-website.com/eacf0b23/dms3rep/multi/opt/BG1-1920w.jpg')",
-      }}
-      className="md:h-[500px] h-[600px] relative "
-    >
-      {/* overlay */}
-      <div className="absolute top-0 w-full py-[4rem]  h-full bg-gradient-to-br from-black to-black/30 right-0 left-0">
-        {/* container */}
-        <section className="w-[90%] mx-auto p-4 space-y-6">
-          <h4 className="md:text-5xl text-4xl text-white  font-headerTwo font-semibold md:w-[40%] w-full">
-            The Ultimate <br /> One-Stop-Shop for Trading
-          </h4>
-          <p className="font-bodyTwo md:w-[50%] leading-normal font-light text-white">
-            Discover a world of convenience with our comprehensive suite of
-            services, tailored to meet the needs of Crypto/Forex brokers.
+    <section className="p-5">
+      {/* container */}
+      <div className="w-full md:w-[80%] mx-auto p-5 md:grid grid-cols-2  md:gap-4 place-items-center">
+        {/* write up */}
+        <div className="font-body space-y-3">
+          <h1 className="text-3xl md:text-5xl font-bold">
+            1 <span className="text-sky-500">Broker</span> 5 Markets
+          </h1>
+          <p className="font-semibold text-blue-400 text-xl capitalize">
+            Trade the top markets with zero commission
           </p>
-          <div className="flex gap-4">
-            <Link
-              href="/login"
-              className="font-headerTwo   px-6 py-3   rounded w-fit font-semibold bg-white"
-            >
-              Login
-            </Link>
-            <Link
-              href="/sign-up"
-              className="font-headerTwo  px-6 py-3  border border-white  rounded w-fit font-semibold text-white"
-            >
-              Sign Up
-            </Link>
+          {/* create account button */}
+          <Link
+            href="/get-started"
+            className="inline-block bg-sky-400 px-4 py-3 rounded text-white"
+          >
+            Create An Account
+          </Link>
+          {/* thumb Nails */}
+          <div className="flex gap-3">
+            {images.map((image) => (
+              <img src={image} className="rounded-full w-[40px]" />
+            ))}
           </div>
-        </section>
+        </div>
+        {/* image */}
+        <img
+          src="https://adrofx.com/themes/custom/adrofx_theme/images/manged-portfolios.png"
+          alt=""
+        />
       </div>
-    </div>
+    </section>
   );
 };
 

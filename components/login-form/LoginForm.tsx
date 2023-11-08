@@ -96,10 +96,21 @@ const LoginForm = (props: Props) => {
 
   return (
     <>
-      <form className="space-y-6" onSubmit={handleSubmit(loginUser)}>
+      <form
+        className="space-y-6 my-[2rem]  bg-white p-4 rounded-md"
+        onSubmit={handleSubmit(loginUser)}
+      >
+        {/* image */}
+        <div className="w-[300px] mx-auto">
+          <img
+            src="https://adrofx.club/sites/all/themes/new_ib/front/img/login/login-image.svg"
+            alt=""
+            className="w-full"
+          />
+        </div>
         {/* email input */}
         <div className="flex flex-col gap-2">
-          <label htmlFor="email" className="font-bodyTwo">
+          <label htmlFor="email" className="font-body font-light text-blue-500">
             Email
           </label>
           <input
@@ -107,17 +118,20 @@ const LoginForm = (props: Props) => {
             {...register("email")}
             className={
               errors.email?.message
-                ? "border-b-2 border-red-500 p-3 font-bodyTwo"
-                : "border-b-2 border-black p-3 font-bodyTwo"
+                ? "border-b-2 border-red-500 p-3 font-body font-light "
+                : "border-b-2 border-black p-3 font-body font-light "
             }
           />
-          <p className="font-bodyTwo text-red-500 text-xs capitalize">
+          <p className="font-body font-light text-red-500 text-xs capitalize">
             {errors.email?.message}
           </p>
         </div>
         {/* Password Input */}
         <div className="flex flex-col gap-2">
-          <label htmlFor="password" className="font-bodyTwo">
+          <label
+            htmlFor="password"
+            className="font-body font-light text-blue-500"
+          >
             Password
           </label>
           <input
@@ -125,17 +139,17 @@ const LoginForm = (props: Props) => {
             {...register("password")}
             className={
               errors.password?.message
-                ? "border-b-2 border-red-500 p-3 font-bodyTwo"
-                : "border-b-2 border-black p-3 font-bodyTwo"
+                ? "border-b-2 border-red-500 p-3 font-body font-light"
+                : "border-b-2 border-black p-3 font-body font-light"
             }
           />
-          <p className="font-bodyTwo text-red-500 text-xs capitalize">
+          <p className="font-body font-light text-red-500 text-xs capitalize">
             {errors.password?.message}
           </p>
         </div>
         {/* forgot password */}
         <div>
-          <Link href="/forgot-password" className="font-bodyTwo">
+          <Link href="/forgot-password" className="font-body font-light">
             Forgot Password?
           </Link>
         </div>
@@ -145,15 +159,15 @@ const LoginForm = (props: Props) => {
           disabled={!isValid}
           className={
             !isValid
-              ? "font-headerTwo text-neutral-200 w-full text-center block p-3 rounded-md bg-neutral-400"
-              : "font-headerTwo text-white w-full text-center block p-3 rounded-md bg-black"
+              ? "font-body  text-blue-200 w-full text-center block p-3 rounded-md bg-blue-400/30"
+              : "font-body  text-white w-full text-center block p-3 rounded-md bg-blue-500"
           }
         >
           Login account
         </button>
         {/* create account link */}
         <div>
-          <p className="font-bodyTwo text-neutral-400">
+          <p className="text-center font-light text-neutral-400 font-body">
             Don't have an account{" "}
             <Link href="/get-started" className="text-black underline">
               Create an account

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Get started with Brokerbase FX Trader",
+  title: "Register A live Account",
   description: "Start your easy trading Today",
 };
 

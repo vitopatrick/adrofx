@@ -1,19 +1,10 @@
 import Link from "next/link";
 import React from "react";
+import { Menu } from "lucide-react";
 
 type Props = {};
 
 const links = [
-  {
-    id: 1,
-    name: "home",
-    path: "/",
-  },
-  {
-    id: 2,
-    name: "Services",
-    path: "/services",
-  },
   {
     id: 3,
     name: "About Us",
@@ -30,36 +21,45 @@ const Navbar = (props: Props) => {
   return (
     <nav className="sticky top-0 bg-white z-50">
       {/* container */}
-      <div className="flex md:w-[80%] mx-auto py-4 px-2 justify-between items-center">
-        <div className="w-[200px]">
+      <div className="flex w-[80%] mx-auto py-4 px-2 justify-between items-center">
+        <div className="w-[150px]">
           <Link href="/">
             <img
-              src="https://irp.cdn-website.com/eacf0b23/dms3rep/multi/BrokerBase+Logo-01.svg"
+              src="https://adrofx.com/themes/custom/adrofx_theme/img/adro-fx-logo.svg"
               alt="logo"
               className="w-full"
             />
           </Link>
         </div>
 
-        <div className="space-x-6 hidden md:block">
+        {/* <div className="space-x-6 hidden md:block">
           {links.map((link) => (
             <Link
               href={link.path}
               key={link.id}
-              className="font-headerTwo font-semibold hover:underline capitalize"
+              className="font-body uppercase tracking-widest font-semibold hover:underline"
             >
               {link.name}
             </Link>
           ))}
-        </div>
-        <div>
+        </div> */}
+        <div className="md:flex gap-4 hidden">
           <Link
             href="/get-started"
-            className="font-headerTwo font-semibold bg-yellow-400 rounded-md px-6 py-3 w-full block"
+            className="font-body font-semibold border border-blue-400 text-blue-400 uppercase   rounded-md px-6 py-3 w-full block"
           >
-            Register Today
+            Login
+          </Link>
+          <Link
+            href="/get-started"
+            className="font-body font-semibold bg-blue-400 uppercase text-white rounded-md px-6 py-3 w-full block"
+          >
+            Register
           </Link>
         </div>
+        <button className="block md:hidden">
+          <Menu />
+        </button>
       </div>
     </nav>
   );

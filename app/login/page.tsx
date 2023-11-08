@@ -1,18 +1,31 @@
 "use client";
 import LoginForm from "@/components/login-form/LoginForm";
+import Link from "next/link";
 import { ToastContainer } from "react-toastify";
 
 export default function LoginPage() {
   return (
-    // Page wrapper
-    <div className="h-screen w-[90%] mx-auto md:grid mt-[4rem] grid-cols-2 gap-[3rem] place-items-center ">
-      <div className="hidden md:block">
-        <h4 className="font-headerTwo text-5xl font-bold">
-          We Believe in Simplicity is <br />
-          sophistication
-        </h4>
-      </div>
-      <div className="w-full">
+    <div
+      style={{
+        background:
+          "url('https://adrofx.club/sites/all/themes/new_ib/front/images/register-bg.jpg')",
+        backgroundPosition: "center center",
+      }}
+    >
+      {/* container */}
+      <div className="md:w-[30%] w-[80%]  mx-auto p-4">
+        {/* header */}
+        <div className="flex items-center justify-center text-center flex-col gap-2">
+          <Link href="/">
+            <img
+              src="https://adrofx.club/sites/all/themes/new_ib/front/img/logo-white.svg"
+              alt=""
+            />
+          </Link>
+          <h4 className="text-white capitalize font-body font-light text-xl">
+            Access to Your personal cabinet
+          </h4>
+        </div>
         <LoginForm />
       </div>
       <ToastContainer theme="colored" className="toast" />

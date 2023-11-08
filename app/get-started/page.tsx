@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import RegisterForm from "./components/RegisterForm";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.min.css";
@@ -8,13 +9,29 @@ export default function GetStarted() {
     // page Wrapper
     <>
       {/* main form wrapper */}
-      <main className="w-[90%] mx-auto md:grid grid-cols-2 place-items-center h-screen ">
-        <div className="hidden md:block">
-          <h4 className="font-headerTwo font-bold text-4xl underline">
-            Register now to trade with <br /> confidence
-          </h4>
+      <main
+        style={{
+          background:
+            "url('https://adrofx.club/sites/all/themes/new_ib/front/images/register-bg.jpg')",
+          backgroundPosition: "center center",
+        }}
+      >
+        {/* container */}
+        <div className="mx-auto p-4 md:w-[40%] w-[80%]">
+          {/* header */}
+          <div className="flex items-center justify-center text-center flex-col gap-2">
+            <Link href="/">
+              <img
+                src="https://adrofx.club/sites/all/themes/new_ib/front/img/logo-white.svg"
+                alt=""
+              />
+            </Link>
+            <h4 className="text-white capitalize font-body font-light text-xl">
+              Register now, it’s quick!
+            </h4>
+          </div>
+          <RegisterForm />
         </div>
-        <RegisterForm />
       </main>
       {/* End of Form Wrapper */}
       <ToastContainer className="toast" theme="colored" />

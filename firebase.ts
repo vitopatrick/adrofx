@@ -5,14 +5,13 @@ import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDa6MEAelYuYqwgqjjmbbVj7Wzz709ThQA",
-  authDomain: "brokerbase-c03dd.firebaseapp.com",
-  projectId: "brokerbase-c03dd",
-  storageBucket: "brokerbase-c03dd.appspot.com",
-  messagingSenderId: "494274016587",
-  appId: "1:494274016587:web:dd21ceae3288ead55724ce",
+  apiKey: "AIzaSyDsX0RVdZkj0MT8-GBznfhFrLqjjDnkio8",
+  authDomain: "adrofx-9feec.firebaseapp.com",
+  projectId: "adrofx-9feec",
+  storageBucket: "adrofx-9feec.appspot.com",
+  messagingSenderId: "253978813344",
+  appId: "1:253978813344:web:edd27081da84b99aef7ac5",
 };
-
 
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
