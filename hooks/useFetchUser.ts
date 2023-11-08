@@ -9,6 +9,9 @@ export const useFetchUser = () => {
   // context api
   const { user }: {} | null | any = useContext(UserContext);
 
+
+  console.log(user.email);
+
   const [userState, setUserState] = useState<{} | null>();
   const [error, setError] = useState<{} | null | string>();
   const [loading, setLoading] = useState(false);
@@ -42,6 +45,7 @@ export const useFetchUser = () => {
     error,
     loading,
   };
+
 
   return { ...sideEffects, userState };
 };

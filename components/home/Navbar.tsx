@@ -45,7 +45,7 @@ const Navbar = (props: Props) => {
         </div> */}
         <div className="flex gap-4">
           <Link
-            href="/get-started"
+            href="/login"
             className="font-body hidden  font-semibold border border-blue-400 text-blue-400 uppercase   rounded-md px-6 py-3 w-full md:block"
           >
             Login

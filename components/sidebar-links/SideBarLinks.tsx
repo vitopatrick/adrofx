@@ -6,8 +6,13 @@ import { MdLogout } from "react-icons/md";
 import { signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { auth } from "@/firebase";
+import { Dispatch } from "react";
+import { SetStateAction } from "react";
 
-export default function SideBarLinks() {
+export default function SideBarLinks({
+  setIsVisible,
+  visible,
+}: Dispatch<SetStateAction<boolean>> | any) {
   // next router
   const router = useRouter();
 
@@ -23,7 +28,7 @@ export default function SideBarLinks() {
       <div>
         <Link
           href="/dashboard"
-          className="w-[50px] underline text-main font-header tracking-widest"
+          className="md:w-[100%] w-[50%] block  mx-auto p-3 underline text-main font-header tracking-widest"
         >
           <img
             src="https://adrofx.com/themes/custom/adrofx_theme/img/adro-fx-logo.svg"
@@ -44,6 +49,7 @@ export default function SideBarLinks() {
               <Link
                 href={link.path}
                 key={link.id}
+                onClick={() => setIsVisible(!visible)}
                 className="flex items-center gap-2 p-4 font-body hover:bg-bg  transition-all ease-in rounded-lg"
               >
                 {link.icons}
@@ -63,6 +69,7 @@ export default function SideBarLinks() {
               <Link
                 href={link.path}
                 key={link.id}
+                onClick={() => setIsVisible(!visible)}
                 className="flex items-center gap-2 p-4 font-body hover:bg-bg  transition-all ease-in rounded-lg"
               >
                 {link.icons}

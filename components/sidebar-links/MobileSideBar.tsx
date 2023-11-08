@@ -26,7 +26,7 @@ export default function MobileSideBar({ isOpen, toggle }: LoadingModal) {
         </button>
       </div>
 
-      <SideBarLinks />
+      <SideBarLinks setIsVisible={isOpen} visible={toggle} />
     </div>
   );
 }

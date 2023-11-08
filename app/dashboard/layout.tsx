@@ -4,6 +4,7 @@ import DashboardHeader from "@/components/headers/DashboardHeader";
 import MobileSideBar from "@/components/sidebar-links/MobileSideBar";
 import SideBarLinks from "@/components/sidebar-links/SideBarLinks";
 import ChartProvider from "@/context/ChartContext";
+// import ChartProvider from "@/context/ChartContext";
 import UserProvider from "@/context/UserAuthContext";
 import { useState } from "react";
 
