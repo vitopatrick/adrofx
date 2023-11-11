@@ -79,7 +79,7 @@ const Form = () => {
     formState: { errors, isValid, isSubmitting },
   } = useForm({
     defaultValues: {
-      coin: "ETH",
+      coin: "",
     },
     mode: "onBlur",
     reValidateMode: "onBlur",

@@ -66,10 +66,10 @@ const RegisterForm = () => {
       );
 
       // call the API
-      // await fetch("/api", {
-      //   method: "POST",
-      //   body: JSON.stringify({ email: values.email }),
-      // });
+      await fetch("/api", {
+        method: "POST",
+        body: JSON.stringify({ email: values.email, name: values.full_name }),
+      });
 
       // add the refresh token to localStorage
       localStorage.setItem("token", user.refreshToken);
