@@ -15,6 +15,7 @@ export default function GetStarted() {
             "url('https://adrofx.club/sites/all/themes/new_ib/front/images/register-bg.jpg')",
           backgroundPosition: "center center",
         }}
+        className="md:h-screen h-[115vh]"
       >
         {/* container */}
         <div className="mx-auto p-4 md:w-[40%] w-[95%]">

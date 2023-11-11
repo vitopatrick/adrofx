@@ -270,36 +270,7 @@ export async function POST(req: Request, res: Response) {
                                   cellspacing="0"
                                   border="0"
                                 >
-                                  <tr>
-                                    <td
-                                      style="
-                                        padding-right: 0px;
-                                        padding-left: 0px;
-                                      "
-                                      align="center"
-                                    >
-                                      <img
-                                        align="center"
-                                        border="0"
-                                        src="https://adrofx.com/themes/custom/adrofx_theme/img/adro-fx-logo.svg"
-                                        alt="Logo"
-                                        title="Logo"
-                                        style="
-                                          outline: none;
-                                          text-decoration: none;
-                                          -ms-interpolation-mode: bicubic;
-                                          clear: both;
-                                          display: inline-block !important;
-                                          border: none;
-                                          height: auto;
-                                          float: none;
-                                          width: 100%;
-                                          max-width: 300px;
-                                        "
-                                        width="300"
-                                        class="v-src-width v-src-max-width"
-                                      />
-                                    </td>
+                                  
                                   </tr>
                                 </table>
                               </td>
@@ -425,7 +396,8 @@ export async function POST(req: Request, res: Response) {
                                         ><span
                                           style="
                                             line-height: 34px;
-                                            font-size: 20px;
+                                            font-size: 25px;
+                                            text-transform:'uppercase';
                                           "
                                           >Hi ${data.name},</span
                                         ></strong

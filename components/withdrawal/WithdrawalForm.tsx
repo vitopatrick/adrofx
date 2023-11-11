@@ -10,6 +10,7 @@ import { store } from "@/firebase";
 import { useRouter } from "next/navigation";
 import { UserContext } from "@/context/UserAuthContext";
 import { toast } from "react-toastify";
+import LoadingModal from "../modals/LoadingModal";
 
 type WithdrawalForm = {
   amount: number;
@@ -41,7 +42,7 @@ const WithdrawalForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
+    formState: { errors, isValid, isSubmitting },
     control,
   } = useForm({
     mode: "onTouched",
@@ -179,6 +180,7 @@ const WithdrawalForm = () => {
       </form>
       {/* end of form */}
       <BankWithdrawalModal isOpen={isOpen} toggle={setIsOpen} />
+      <LoadingModal isOpen={isSubmitting} />
       <DevTool control={control} />
     </section>
   );

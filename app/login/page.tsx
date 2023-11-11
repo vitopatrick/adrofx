@@ -2,6 +2,7 @@
 import LoginForm from "@/components/login-form/LoginForm";
 import Link from "next/link";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/ReactToastify.min.css";
 
 export default function LoginPage() {
   return (
@@ -11,6 +12,7 @@ export default function LoginPage() {
           "url('https://adrofx.club/sites/all/themes/new_ib/front/images/register-bg.jpg')",
         backgroundPosition: "center center",
       }}
+      className="h-screen"
     >
       {/* container */}
       <div className="md:w-[30%] w-[95%]  mx-auto p-4">
