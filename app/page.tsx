@@ -3,6 +3,7 @@ import Hero from "@/components/home/Hero";
 import ManagePortfoilos from "@/components/home/ManagePortfoilos";
 import MetaTrader from "@/components/home/MetaTrader";
 import Navbar from "@/components/home/Navbar";
+import Reviews from "@/components/home/Reviews";
 import TradeByCopying from "@/components/home/TradeGrid";
 import TradeGrid from "@/components/home/TradeGrid";
 import TradingPlatform from "@/components/home/TradingPlatform";
@@ -31,6 +32,8 @@ export default function Home() {
       <StepsToTrading />
       {/* our services */}
       <OurServices />
+      {/* Reviews */}
+      <Reviews />
       {/* Footer */}
       <Footer />
     </>
