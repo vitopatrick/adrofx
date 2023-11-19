@@ -3,8 +3,10 @@ import Link from "next/link";
 import RegisterForm from "./components/RegisterForm";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.min.css";
+import { useChatSupport } from "@/hooks/useChatSupport";
 
 export default function GetStarted() {
+  useChatSupport();
   return (
     // page Wrapper
     <>

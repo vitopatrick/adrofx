@@ -9,6 +9,7 @@ import { sendPasswordResetEmail } from "firebase/auth";
 import { auth } from "@/firebase";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.css";
+import { useChatSupport } from "@/hooks/useChatSupport";
 
 // Type for form
 type FormValue = {
@@ -24,6 +25,7 @@ const schema = yup.object({
 });
 
 export default function ForgotPassword() {
+  useChatSupport();
   // react hook form
   const {
     register,
