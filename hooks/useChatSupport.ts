@@ -2,16 +2,15 @@ import { useEffect } from "react";
 
 export const useChatSupport = () => {
   useEffect(() => {
-    var Tawk_API: any = Tawk_API || {},
-      Tawk_LoadStart = new Date();
-    (function () {
-      var s1: any = document.createElement("script"),
-        s0: any = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = "https://embed.tawk.to/65549788cec6a912821001dd/1hf96vsbu";
-      s1.charset = "UTF-8";
-      s1.setAttribute("crossorigin", "*");
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  }, []);
+    const script = document.createElement("script");
+    script.src = "https://code.jivosite.com/widget/dMD3QovRAt";
+    script.async = true;
+
+    document.body.appendChild(script);
+
+    // Cleanup function to remove the script on component unmount
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []); // Empty dependency array to run the effect only once on mount
 };
