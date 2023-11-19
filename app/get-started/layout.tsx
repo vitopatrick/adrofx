@@ -1,3 +1,4 @@
+import { useChatSupport } from "@/hooks/useChatSupport";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,6 +11,7 @@ export default function RegisterLayout({
 }: {
   children: React.ReactNode;
 }) {
+  useChatSupport();
   return (
     <html lang="en">
       <body className="h-screen w-screen">{children}</body>

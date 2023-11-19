@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect } from "react";
 
 export const useChatSupport = () => {
@@ -17,6 +15,3 @@ export const useChatSupport = () => {
     })();
   }, []);
 };
-
-
-

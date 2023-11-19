@@ -1,16 +1,11 @@
 "use client";
 import LoginForm from "@/components/login-form/LoginForm";
-import { useChatSupport } from "@/hooks/useChatSupport";
 import Link from "next/link";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.min.css";
 
 
 export default function LoginPage() {
-
-  useChatSupport();
-
-
   return (
     <div
       style={{
