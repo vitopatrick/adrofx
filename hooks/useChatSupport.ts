@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+import { useMemo } from "react";
 
 export const useChatSupport = () => {
-  useEffect(() => {
+  useMemo(() => {
     const script = document.createElement("script");
     script.src = "https://code.jivosite.com/widget/dMD3QovRAt";
     script.async = true;
