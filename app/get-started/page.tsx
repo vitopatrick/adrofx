@@ -3,10 +3,9 @@ import Link from "next/link";
 import RegisterForm from "./components/RegisterForm";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.min.css";
-import { useChatSupport } from "@/hooks/useChatSupport";
+import JivoChatSupport from "@/hooks/JivoChatSupport";
 
 export default function GetStarted() {
-  useChatSupport();
   return (
     // page Wrapper
     <>
@@ -38,6 +37,7 @@ export default function GetStarted() {
       </main>
       {/* End of Form Wrapper */}
       <ToastContainer className="toast" theme="colored" />
+      <JivoChatSupport />
     </>
   );
 }

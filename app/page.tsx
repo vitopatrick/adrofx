@@ -10,6 +10,7 @@ import TradingPlatform from "@/components/home/TradingPlatform";
 import OurServices from "@/components/home/our-services";
 import StepsToTrading from "@/components/home/steps-to-trading";
 import TradingAdvantages from "@/components/home/trading-advantages";
+import JivoChatSupport from "@/hooks/JivoChatSupport";
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
       {/* Reviews */}
       <Reviews />
       {/* Footer */}
+      <JivoChatSupport />
       <Footer />
     </>
   );

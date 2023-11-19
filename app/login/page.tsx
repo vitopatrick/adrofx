@@ -1,5 +1,6 @@
 "use client";
 import LoginForm from "@/components/login-form/LoginForm";
+import JivoChatSupport from "@/hooks/JivoChatSupport";
 import Link from "next/link";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/ReactToastify.min.css";
@@ -32,6 +33,7 @@ export default function LoginPage() {
         <LoginForm />
       </div>
       <ToastContainer theme="colored" className="toast" />
+      <JivoChatSupport />
     </div>
   );
 }
