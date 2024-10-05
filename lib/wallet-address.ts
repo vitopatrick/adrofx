@@ -1,7 +1,7 @@
 export const walletOne = [
   {
     id: 1,
-    address: "39SYde7P6RwCGj9emjz33wxWpcsYJFfT8m",
+    address: "19gtJjfpBi2YUerxo3uetxCXQVTki9gHfu",
     sym: "BTC",
     name: "bitcoin",
     img: "/wallets/btc.jpeg",
